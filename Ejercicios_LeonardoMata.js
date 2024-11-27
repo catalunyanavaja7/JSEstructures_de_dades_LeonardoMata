@@ -56,3 +56,25 @@ let stringConMuchaA = nombresConA.filter(str => {
     return contadorA > 1;
 });
 console.log("Strings con mas de una A: ", stringConMuchaA);
+
+// Ejercicio 7
+console.log("=====Ejercicio 9=====");
+
+let listaPeliculas = [
+    { titulo: "Scooby doo", fecha: 2002, director: "Raja Gosnell"},
+    { titulo: "bob esponja: un heroe fuera del agua", fecha: 2015, director: "Paul Tibbitt"},
+    { titulo: "bob esponja: atrapados en el congelador", fecha: 2009, director: "Andrew Overtoom"},
+    { titulo: "devilman crybaby", fecha: 2018, director: "Go Nagai"},
+    { titulo: "Dexter's Laboratory: Ego trip", fecha: 1999, director: "Chris Savino"}
+];
+
+let peliMasAntigua = listaPeliculas[0];
+
+// Iteración:
+for (let pelicula of listaPeliculas) {
+    if (pelicula.fecha < peliMasAntigua.fecha) {
+        peliMasAntigua = pelicula;
+    }
+}
+
+console.log("La pelicula mas antigua es:", peliMasAntigua.titulo);
